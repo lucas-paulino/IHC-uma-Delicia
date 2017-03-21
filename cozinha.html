@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cozinha - IHC é uma Delícia</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo-fonte.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-tooltip.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo-itens-emergem.css">
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/codigo.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+
+	<body >
+		<div id="container">
+
+			<div id="preload"></div>
+
+			<section id="tela-c">
+				<div id="Dialogo">
+					<div id="iconTici" alt="Icone da Tici"> </div>
+					<div id="caixaDialogo">
+						<article>
+						<p></p>
+						</article>
+						<div id="FecharCaixaDialogo"> <img src="img/icon/sair.png" alt="fechar caixa de dialogo"> </div>
+					</div>
+				</div>
+				
+				<nav id="display1">
+					<ul>
+						<a><li id="bt-confg" class="jeito-tooltip" data-toggle="tooltip" data-placement="bottom" title="Configurações"> <img src="img/icon/config.png" alt="Icone de configurações"></li></a>
+						<!-- <a><li id="bt-ajuda" class="jeito-tooltip" data-toggle="tooltip" data-placement="bottom" title="Ajuda"> <img src="img/aa.png" alt="Icone de ajuda"> </li></a> -->
+						<a><li id="bt-sair" class="jeito-tooltip" data-toggle="tooltip" data-placement="bottom" title="Sair do jogo"> <img src="img/icon/sair-c.png" alt="Icone de sair de aplicação"></li></a>
+					</ul>
+				</nav>
+				
+				<div id="bottom-tela">
+					<nav id="display2">
+						<ul>
+							<li id="bt-dc" class="jeito-tooltip" data-toggle="tooltip" data-placement="top" title="Diagrama Conceitual">
+								<div class="icon-display2"><img src="img/icon/relat.png" alt="Icone do Diagrma Conceitual"></div> 
+								<h1>0/8</h1> 
+							</li>
+							<!--<li id="bt-lilica" class="jeito-tooltip" data-toggle="tooltip" data-placement="top" title="Quantidade de Licica">
+								<div class="icon-display2"><img src="img/icon/lilica.png" alt="Icone da quantidade de Lilicas"></div>
+								<h1>0/1</h1> 
+							</li> -->
+						</ul>
+					</nav>
+					<div id="Mapa" class="jeito-tooltip" data-toggle="tooltip" data-placement="top" title="Mapa"><img src="img/icon/map.png" alt="Icone do mapa da casa"> </div>
+				</div>
+			</section>
+
+			<!-- Não aparece -->
+
+				<audio id="efeitoSonoro">
+					<source src="sons/click.mp3"></source>
+				</audio>
+
+				<audio id="musicaFundo" autoplay loop>
+					<source src="sons/music-3.mp3"></source>
+				</audio>
+
+				<div class="fundo"></div>
+
+			    <div class="caixa-mapa">
+			    	<div class="mapa-concluido1"></div>
+			    	<div class="mapa-concluido2"></div>
+			    	<div class="mapa-concluido3"></div>
+			    	<div  id="fecharMapa">
+			    	<img src="img/icon/sair.png" alt="Fechar mapa"> 
+			    	</div>
+			    </div>
+
+			    <div class="caixa-diagramaC">
+				    <div class="conteudo-diagramaC" >		
+				    	<h1 > <img src="img/icon/relat.png">Diagrama Conceitual</h1>
+				    	<div class="contemImagensDiagrama">
+					    	<div><img id="imgdiagramaSC" src="img/relacoes/sem-conexao.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaII" src="img/relacoes/int-med-intera.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaAI" src="img/relacoes/aff-sug-int.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaEMC" src="img/relacoes/eng-exp-modC.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaEMM" src="img/relacoes/eng-exp-ModM.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaIF" src="img/relacoes/int-ut-aff.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaMCMM" src="img/relacoes/modC-emb-modM.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaMCI" src="img/relacoes/modC-sus-int.png" alt="Diagrama conceitual"></div>
+					    	<div><img id="imgdiagramaMMMC" src="img/relacoes/modM-inf-modC.png" alt="Diagrama conceitual"></div>
+				    	</div>
+				    </div>
+				    	<!-- Hover Diagrama -->
+							<div id="interface" class="jeito-tooltip" data-toggle="tooltip" data-placement="rigth" title="É a ponte entre dois universos! Através dela, é possível se comunicar para realizar suas tarefas. Ou seja, é por meio da interface que podemos enviar e receber informações."></div>
+
+							<div id="affordance" class="jeito-tooltip" data-toggle="tooltip" data-placement="rigth" title="É um conjunto de características que um elemento têm que torna óbvio o que ele faz e como ele é utilizado, sem precisar de instruções."></div>
+
+							<div id="interacao" class="jeito-tooltip" data-toggle="tooltip" data-placement="rigth" title="É tudo que acontece quando uma pessoa e um sistema se unem para fazer uma tarefa. Resumindo, interação é comunicação!"></div>
+
+							<div id="eng-cognitiva" class="jeito-tooltip" data-toggle="tooltip" data-placement="rigth" title="Tenta entender como as pessoas interagem com a interface de um sistema. Ou seja, ela foca nos processos psicológicos das pessoas e nos fenômenos envolvidos durante a interação."></div>
+							
+							<div id="modelo-conceitual" class="jeito-tooltip" data-toggle="tooltip" data-placement="rigth" title="É o conjunto de ideias que, baseado nas necessidades e modelo mental das pessoas, deve mostrar tudo o que o produto deve fazer, como deve-se comportar e como deve-se parecer."></div>
+							
+							<div id="modelo-mental" class="jeito-tooltip" data-toggle="tooltip" data-placement="left" title="São os modelos que as pessoas tem em mente sobre como as coisas devem funcionar. Eles são baseados em experiências ou percepções intuitivas."></div>
+ 
+					<div class="arrow-box-bottom"> </div>
+			    </div>
+
+			    <div class="caixa-config">    
+				    <div class="arrow-box-top"> </div>
+				    <div class="conteudo-config">		
+				    	<h1> <img src="img/icon/config.png"> Configurações</h1>
+				        <div class="content-c-config">
+
+							<div class="conte-font-tudo">
+								<p>Tamanho de fonte: </p>
+								<div>
+									<span>A</span>
+									<input type="range" name="points" min="0" max="2" value="0" id="barrafont" />
+									<span>A</span>
+								</div>
+							</div>
+
+							<div class="conte-som-tudo">		
+								
+								<div class="configSom">
+									<p>Som </p> 
+									<div>
+										<span>OFF</span> 
+										<input type="range" min="0" max="1" value="0" id="barramusica" />
+										<span>ON</span>
+									</div> 
+								</div>
+
+								<div class="configESom">
+									<p>Musica de Fundo : </p>
+									<div>
+										<span>0</span>
+										<input type="range" name="points" min="0" max="3" value="1" id="barramusicavol" />
+										<span>4</span>	
+									</div>
+								</div> 
+
+								<div class="configSomF">
+									<p>Efeito Sonoro: </p>
+									<div>
+										<span>0</span>
+										<input type="range" min="0" max="3" value="1" id="barrasom" />
+										<span>4</span>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+					</div>		    
+			    </div>
+
+			    <div class="caixa-conclusao">
+
+			    	<div id="Tici"></div>
+			    	<div class="contem-conclusao">
+				    	<div class="balao-conclusao">
+				    	<h1>Parabéns</h1>
+				    	<p>
+				    		Durante a sua passada por aqui você pode perceber que todos os conceitos vistos em aula , podem ser aplicados as mais diversas situações do seu cotidiano, e ate em tarefas simples existe todo um conjunto de conceitos que influenciam diretamente no seu sucesso. Modelo conceitual, mental, eng. cognitiva, interface, affordances são apenas alguns dos conceitos que envolvem o Design de Interação.
+				    	</p>
+				    		
+				    	</div>
+				    	<div class="bt-confirma"><img src="img/icon/confirmar.png" alt="Botão de confimar de conclusão da aplicação"></div>
+			    	</div>
+			    </div>
+
+                <!-- <div class="caixa-lilica">
+				    <div class="conteudo-lilica">		
+				    	<h1>Lilica</h1>
+					</div>
+					<div class="arrow-box-bottom"> </div>
+			    </div> 
+			    <div class="caixa-ajuda">
+			    	<div class="arrow-box-top"> </div>
+				    <div class="conteudo-config">		
+				    	<h1>Ajuda</h1>
+					</div>
+			    </div> -->
+
+		    <!-- Botões que emergem a tela escura -->
+		    	
+		    	<div id='contador'>1</div>
+		    
+			    <div id="config-emerge" class="dis1-bt-emerge">
+			    	<img src="img/icon/config.png" alt="Icone de configurações">
+			    </div>
+
+			    <!--<div id="ajuda-emerge" class="dis1-bt-emerge">
+			    	<img src="img/aa.png" alt="Icone de ajuda">
+			    </div>-->
+
+			    <div id="sair-emerge" class="dis1-bt-emerge">
+			    	<img src="img/icon/sair.png" alt="Icone de sair de aplicação">
+			    </div>
+
+			    <div id="dc-emerge" class="dis2-bt-emerge">
+			    	<div class="icon-display2">
+			    		<img src="img/icon/relat.png" alt="Icone do Diagrma Conceitual">
+			    	</div> 
+					<h1>0/8</h1> 
+			    </div>
+
+			    <div id="lilica-emerge" class="dis2-bt-emerge">
+			    	<div class="icon-display2">
+			    		<img src="img/icon/lilica.png" alt="Icone da quantidade de Lilicas">
+			    	</div> 
+					<h1>0/1</h1>
+			    </div>
+
+			<!-- Coisas em Cena -->
+				
+			    <div id="elemento6" class="jeito-tooltip" data-toggle="tooltip" data-placement="left" title="Sala">
+			    	<div></div>	
+			    </div>
+			    
+			    <div id="elemento7" class="jeito-tooltip" data-toggle="tooltip" data-placement="bottom" title="Fazer pipoca">
+			    	<div></div>
+			    </div>
+			
+			<!-- Atividades -->
+
+				<div id="micro-ondas">
+					<div id="fecharTelaMicro" class="jeito-tooltip" data-toggle="tooltip" data-placement="top" title="Voltar à Cozinha"><img src="img/icon/voltar.png" alt="Fechar mapa"> </div>
+					<div id="texto-dialogoMic">
+						<article style="float:left;">
+							<p> Você conseguiu preparar a pipoca? Conseguiu ajustar o tempo corretamente? </p>
+						</article>
+						<div class="bt-passar-texto"> <img src="img/icon/pular-texto.png"> </div>
+					</div>
+					<div class="micro-tela0"></div>
+					<div class="micro-tela1"></div>
+					<div class="micro-tela2"></div>
+					<div class="micro-tela3"></div>
+					<div class="micro-tela4"></div>
+				</div>
+				
+		</div>
+	</body>
+</html>

@@ -1,0 +1,932 @@
+/*------------------------------------Elementos html------------------------------*/
+
+    *{	margin:0px; text-decoration:none; font-family:calibri; }
+
+    body{ overflow: hidden; }
+
+    ul{padding: 0px}
+
+    p, span{ font-family: Sansita-Regular; font-size: 22px; color: #00362c; }
+
+    h1{ font-family: Sansita-Bold; font-size: 34px; color: #168568; text-align: center; padding: 30px 10px 0px; }
+
+    h1 img{ width: 30px; height: 30px; margin-right: 10px; }
+
+    h2{ font-family: Sansita-Bold; font-size: 22px; text-transform:uppercase; color: #00362c; text-align: center; padding: 15px 0px; }
+
+/*------------------------------------Tela F11------------------------------------*/
+
+    #preload{
+        position: absolute;
+        width: 100%;
+        background-color: #F0F0F1;
+        z-index: 1000;
+    }
+
+    #txtTelaCheia{
+        width: 30%;
+        margin: 15% auto 0px;
+        text-align: center;
+    }
+
+    #txtTelaCheia img{
+        width: 75%;
+        margin: 0px auto 8%;
+    }
+
+    #txtTelaCheia p{ color: #0E5440; }
+    #txtTelaCheia p span{ color: #D0340B; }
+
+    #btTelaCheia{
+        padding: 10px;
+        border-radius: 6px;
+        width: 8%;
+        margin: 2% auto 0px;
+        background-color: #168568; 
+        cursor: pointer;
+        transition: .5s;
+        box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+    }
+
+    #btTelaCheia:hover{ background-color: #0E5440; }
+    #btTelaCheia p{ color: white; text-align: center; }
+
+/*------------------------------------Telas---------------------------------------*/
+    #container{ background-color: #E1EDEC; }
+
+    #inicio,#tela-s, #tela-c, #tela-s, #tela-b{
+        width: 940px;
+        height: 684px;
+        margin: auto;
+        padding: 40px;
+        background-color: grey;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #inicio{ background-image: url('../img/cenarios/sala(desfoque).png'); }
+    #tela-s{ background-image: url('../img/cenarios/sala.png'); }
+    #tela-c{ background-image: url('../img/cenarios/cozinha.png'); }
+    #tela-b{ background-image: url('../img/cenarios/banheiro.png'); }
+
+.jeito-tooltip + .tooltip > .tooltip-inner {
+    font-size:20px;
+    color: #168568;
+    font-family: Sansita-Regular;
+}
+
+#logo{
+    width: 340px;
+    height: 360px;
+    margin: 63px auto 30px;
+}
+
+#logo img{ width: 100%; }
+
+#display-inicio{
+    width: 340px;
+    height: 120px;
+    margin: 0px auto 63px;
+}
+
+.item-inicio{
+    width: 140px;
+    height: 120px;
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+}
+
+.item-inicio img{ width: 100%; }
+
+.config-caixa, .info-caixa{
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: 20px; 
+}
+
+.config-caixa{ margin-right: 20px;  }
+
+.config-caixa img, .info-caixa img{ width:100%; }
+
+/*------Caixa de Dialogo----------------------------------------*/
+    
+    .caixa-dialogo{
+        position: absolute;
+        top: 0;
+        left: 15%;
+        width: 70%;
+        height: 20%;
+        background-color: #DDE9E7;
+        z-index: 90;
+        padding: 20px;
+        border-radius: 4px;
+        display: none;
+    }
+
+    #Dialogo{
+        width: 550px;
+        position: relative;
+        float: left;
+        z-index: 100;
+    }
+
+    #iconTici{
+        width: 140px;
+        height: 120px;
+        background-image: url('../img/tici.png');
+        background-color: #D63229;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        border-radius: 10px;
+        z-index: 100;
+    }
+
+    #caixaDialogo{
+        width: 0%;
+        height: 120px;
+        margin-left: 120px;
+        background-color: rgba(240,240,241,.95);
+        border-radius: 10px;
+    }
+
+    #caixaDialogo article{
+        width: 84%;
+        height: 100px;
+        float: left;
+        margin: 10px;
+        margin-left: 30px;
+        display: none;
+    }
+
+    #FecharCaixaDialogo{
+        float: right;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #FecharCaixaDialogo img{ width: 90%; }
+    
+    .bt-passar-info{
+        width: 30px;
+        height: 30px;
+        left: calc(100% - 85px);
+        top: calc(100% - 90px);
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .bt-passar-info img{ width: 80%; }
+
+#display1{
+    width: 155px;
+    height: 120px;
+    float: right;
+    z-index:100;
+}
+
+#display1 li{
+    width: 44px;
+    height: 44px;
+    margin-left: 15px;
+    background-color: rgba(240,240,241,.95);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 8px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+    cursor: pointer; 
+}
+
+#display1 li img{ width: 100%; }
+
+#bottom-tela{ margin-top: 67%; }
+
+#display2{
+    float: left;
+    width: 320px;
+    height: 60px;
+}
+
+#display2 li{
+    list-style: none;
+    float: left;
+    height: 44px;
+    padding: 8px;
+    width: 125px;
+    margin-right: 15px;
+    background-color: rgba(240,240,241,.95);
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+    cursor:pointer;
+}
+
+#display2 ul li h1{
+    font-size: 36px;
+    font-family: Sansita-Regular;
+    color:#106957;
+    width: 40%;
+    float: left;
+    margin-left: 4%;
+    padding: 0px;
+}
+
+.icon-display2{
+    width: 44px;
+    height: 44px;
+    float: left;
+}
+
+.icon-display2 img{ width: 100%; }
+
+/*------Mapa----------------------------------------------*/
+    #Mapa{ 
+      float: right;
+      width: 44px;
+      height: 44px;
+      background-color: rgba(240,240,241,.95);
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+      cursor:pointer;
+    }
+
+    .caixa-mapa{
+        position: absolute;
+        display: none;
+        width: 300px;
+        height: 230px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(240,240,241,.95);
+        box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+        border-radius: 8px;
+        z-index: 90;
+        padding: 0px;
+    }
+
+    #Mapa img{ width: 100%; }
+
+    .mapa-concluido1, .mapa-concluido2, .mapa-concluido3{
+        display: none;
+        position: absolute;
+        width: 30px; 
+        height: 30px; 
+        background-image: url('../img/ok.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%; 
+    }
+
+    .mapa-concluido1{ left:65.8%; top: 54%; }
+    .mapa-concluido2{ left: 21.5%; top: 56%; }
+    .mapa-concluido3{ left: 22.5%; top: 19%; }
+
+    #fecharMapa{
+        float: right;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+#fecharMapa img, #fecharInfo img, #fecharTelaTv img, #fecharConfig img{
+    width: 100%;
+}
+
+.fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333737;
+    z-index: 100;
+    display: none;
+    opacity: .0;
+}
+
+.arrow-box-top{
+  height: 12px;
+  width: 540px;
+  background-image: url('../img/arrow-caixa.png');
+  background-repeat: no-repeat;
+  background-size: auto 12px;
+  background-position: right;
+  border-radius: 8px;
+}
+
+.arrow-box-bottom{
+  height: 12px;
+  background-image: url('../img/arrow-caixa-b.png');
+  background-repeat: no-repeat;
+  background-size: auto 12px;
+  border-radius: 8px;
+}
+
+/*------------------------------------Configuração----------------------------------------*/
+    #fecharConfig{
+        width: 20px;
+        height: 20px;
+        top: 4%;
+        left: 93%;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1000;
+    }
+    .caixa-config-inicio{
+        width: 540px;
+        height: 366px;
+        display: none;
+        position: absolute;
+        top: calc(50% - 380px/2);
+        left: calc(50% - (560px/2));
+        z-index: 100;
+        background-color: #DDE9E7;
+        border-radius: 8px;
+    }
+
+    .caixa-config{
+        position: absolute;
+        width: 540px;
+        height: 380px;
+        z-index: 110;
+        border-radius: 8px;
+        display: none;
+        opacity: 1;
+    }
+
+    .conteudo-config{
+        width: 540px;
+        height: 366px;
+        background-color: #DDE9E7;
+        border-radius: 8px;
+    }
+
+    .conteudo-config h1{ text-transform:uppercase; }
+
+    .content-c-config{
+        position: relative;
+        width: 84.4%;
+        margin: 0px auto;
+    }
+
+    .conte-font-tudo{
+        margin: 15px auto 10px;
+        background-color: #f3f6f6;
+        padding: 15px;
+        border-radius: 10px;
+        height: 27px;
+    }
+    .conte-font-tudo p{ float: left; }
+    .conte-font-tudo div{ padding-bottom: 0px;float: right;background-repeat: no-repeat; background-image: url('../img/pontos-range3.png'); background-position: center bottom; background-size: 80% 15% }
+    .conte-font-tudo div span:nth-child(1){ font-size: 22px !important; }
+    .conte-font-tudo div span:nth-child(3){ font-size: 26px !important; }
+    #barrafont, #barramusicavol, #barrasom{ width: 140px; }
+
+    .conte-som-tudo{
+        margin: 10px auto 0px;
+        background-color: #f3f6f6;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .configSom, .configESom, .configSomF{
+        clear: both;
+        height: 36px;
+    }
+
+    .configSom, .configESom{ padding-bottom: 15px; }
+
+    #barramusica{ width: 60px; }
+
+    .configSom p{ float: left; }
+    .configSom div{ padding-bottom: 0px; float: right;background-repeat: no-repeat; background-image: url('../img/pontos-range2.png'); background-position: center bottom; background-size: 50% 15%; }
+
+    .configESom p{ float: left; margin-left: 20px; }
+    .configESom div{ padding-bottom: 0px; float: right;background-repeat: no-repeat; background-image: url('../img/pontos-range4.png'); background-position: center bottom; background-size: 80% 15% }
+
+    .configSomF p{ float: left; margin-left: 20px; }
+    .configSomF div{ padding-bottom: 0px; float: right;background-repeat: no-repeat; background-image: url('../img/pontos-range4.png'); background-position: center bottom; background-size: 80% 15%  }
+
+/*------------------------------------Caixa Diagrama Conceitual---------------------------*/
+
+    .caixa-diagramaC{
+        position: absolute;
+        top: 10%;
+        left: 39%;
+        width: 937px;
+        height: 555px;
+        z-index: 110;
+        border-radius: 8px;
+        display: none;
+        opacity: 1;
+    }
+
+    .conteudo-diagramaC{
+        width: 937px;
+        height: 543px;
+        background-color: #DDE9E7;
+        border-radius: 8px;
+    }
+
+    .contemImagensDiagrama{ width: 91%;height: 406px; margin: 0px auto; margin-top: 15px; }
+    .contemImagensDiagrama div img{ width: 91%;height: 406px;}
+    .conteudo-diagramaC h1{ text-transform:uppercase; }
+
+    #imgdiagramaSC{ position: absolute; }
+
+    #imgdiagramaII, #imgdiagramaAI, #imgdiagramaEMC, #imgdiagramaEMM, #imgdiagramaIF, #imgdiagramaMCMM, #imgdiagramaMCI, #imgdiagramaMMMC{
+        position: absolute;
+        display: none;
+    }
+
+.caixa-ajuda{
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    width: 620px;
+    height: 488px;
+    z-index: 110;
+    border-radius: 8px;
+    display: none;
+    opacity: 1;
+}
+
+.conteudo-ajuda{
+  width: 620px;
+  height: 480px;
+  background-color: #DDE9E7;
+  border-radius: 8px;
+}
+
+.caixa-lilica{
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    width: 620px;
+    height: 483px;
+    z-index: 110;
+    border-radius: 8px;
+    display: none;
+    opacity: 1;
+}
+
+.conteudo-lilica{
+    width: 620px;
+    height: 471px;
+    background-color: #DDE9E7;
+    border-radius: 8px;
+}
+
+.ConfigIcon{
+    float: right;
+    width: 60%;
+    margin-top: 10px;
+}
+
+/*------------------------------------Caixa Informações---------------------------*/
+    #fecharInfo{
+        width: 20px;
+        height: 20px;
+        top: 4%;
+        left: 95%;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .caixa-info{
+        position: absolute;
+        top: 10%;
+        left: 19%;
+        width: 860px;
+        height: 540px;
+        background-color: #DDE9E7;;
+        z-index: 110;
+        border-radius: 8px;
+        box-shadow: 2px 2px 2px #333333;
+        display: none;
+        opacity: .0;
+    }
+
+    .caixa-info h1{ text-transform:uppercase; margin-bottom: 15px; }
+
+    .contem-info{    
+        width: 780px;
+        height: 400px;
+        margin: 0px auto;
+        background-color: rgba(255,255,255, .5);
+        border-radius: 8px;
+    }
+
+    .contem-info2{
+        display: none;
+        width: 780px;
+        height: 400px;
+        margin: 0px auto;
+        background-color: rgba(255,255,255, .5);
+        border-radius: 8px;
+    }
+
+    #logo-equipe{
+        width: 240px;
+        margin: 10px auto 0px;
+    }
+
+    #logo-equipe img{ width: 100%; cursor: pointer; }
+
+    .contem-membros{ height: 128px; }
+
+    .membro-equipe{
+        float: left;
+        margin-left: 15px;
+        width: 141px;
+    }
+
+    .membro-equipe p{ text-align: center; font-size: 20px !important; }
+
+    .foto-membro{
+        width: 80px;
+        height: 80px;
+        margin: 0px auto;
+    }
+
+    .foto-membro img{ width: 100%; }
+
+    .texto-info{
+        width: 740px;
+        margin: 0px auto;
+        text-align: justify;
+    }
+
+    .contem-agrad{
+        width: 60%; 
+        float:left;
+        margin-top: 15px; 
+    }
+
+    .agrad{
+        float:left; 
+        margin-left:40px;
+        font-family: Sansita-Regular;
+        font-size: 20px;
+        color: #00362c;
+    }
+
+    .contem-inst{width: 40%; float:left; margin-top: 15px;}
+    .contem-inst img:nth-child(1){width: 38%; float: right; margin-right: 20px; margin-top: 20px }
+    .contem-inst img:nth-child(2){width: 18%; float: right; margin-right: 65px; margin-top: 20px }
+
+/*------------------------------------Caixa Conclusão-----------------------------*/
+    .caixa-conclusao{
+        width: 776px;
+        height: 500px;
+        position: absolute;
+        left: calc(50% - 430px);
+        top: calc(50% - 280px);
+        background-color: #DDE9E7;
+        border-radius: 8px;
+        z-index: 1000;
+        padding: 40px 42px 20px;
+        display: none;
+    }
+
+    #Tici{
+        width: 220px;
+        height: 470px;
+        background-image: url('../img/Tici-Vetor.png');
+        background-size: 100% 100%;
+        margin-top: 50px; 
+        margin-left: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+    }
+
+    .contem-conclusao{
+        width: 500px;
+        height: 475px;
+        float: right;
+    }
+
+    .balao-conclusao{
+        position: relative;
+        width: 460px;
+        height: 390px;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 8px;
+        padding: 15px 20px
+    }
+
+    .balao-conclusao h1{ padding-top: 0px; padding-bottom: 15px; }
+
+    .bt-confirma{
+        margin: 15px auto 0px;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(240,240,241,.95);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+        cursor: pointer; 
+    }
+
+/*------------------------------------Atividades----------------------------------*/
+    #tv, #micro-ondas, #telefone, #ar-condic, #torneira{
+        position: absolute;
+        display: none;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 150;
+    }
+
+    .bt-passar-texto{
+        position:relative; 
+        float:left; 
+        margin-top: 88px;
+        margin-left: 0.5%; 
+        cursor:pointer;
+    }
+
+    #texto-dialogoTv, #texto-dialogoTel, #texto-dialogoAr, #texto-dialogoMic, #texto-dialogoTorn {
+        background-image: url('../img/caixa.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: calc(100% - 80px);
+        height: 120px;
+        left:40px ;
+        top: 40px;
+        z-index: 2000;
+    }
+
+    #texto-dialogoTv article, #texto-dialogoTel article, #texto-dialogoAr article, #texto-dialogoMic article, #texto-dialogoTorn article{
+        width: 81%;
+        float:left;
+        //background-color: blue;
+        margin-left: 15.4%;
+        margin-top: 0.5%; 
+        height: 110px;
+        overflow: hidden;
+    }
+
+    #texto-dialogoTv article p, #texto-dialogoTel article p, #texto-dialogoAr article p, #texto-dialogoMic article p, #texto-dialogoTorn article p{
+        overflow: hidden;
+        padding: 8px;
+        //background: purple;
+    }
+
+    #fecharTelaTv, #fecharTelaMicro, #fecharTelaTel, #fecharTelaAr, #fecharTelaTorn{
+        width: 44px;
+        height: 44px;
+        background-color: rgba(240,240,241,.95);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 2px 2px 7px rgba(0,0,0,.4);
+        top: calc(100% - 95px);
+        left: 40px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .micro-tela0, .micro-tela1, .micro-tela2, .micro-tela3, .micro-tela4,
+    .tv-tela0, .tv-tela1, .tv-tela2, .tv-tela3, .tv-tela4, 
+    .tel-tela0, .tel-tela1, .tel-tela2, .tel-tela3, .tel-tela4, .tel-tela5, 
+    .ar-tela0, .ar-tela1, .ar-tela2, .ar-tela3,
+    .torneira-tela0, .torneira-tela1, .torneira-tela2, .torneira-tela3, .torneira-tela4, .torneira-tela5 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Telas Micro-ondas--------------------------------------------------*/
+
+        .micro-tela0{
+            display: block;
+            background-image: url('../img/TelaMicroOndas/micro-0.png');
+        } 
+
+        .micro-tela1{
+            display: none;
+            background-image: url('../img/TelaMicroOndas/micro-1.png');
+        } 
+
+        .micro-tela2{
+            display: none;
+            background-image: url('../img/TelaMicroOndas/micro-2.png');
+        } 
+
+        .micro-tela3{
+            display: none;
+            background-image: url('../img/TelaMicroOndas/micro-3.png');
+        } 
+
+        .micro-tela4{
+            display: none;
+            background-image: url('../img/TelaMicroOndas/micro-4.png');
+        }
+
+    /* Telas Televisão--------------------------------------------------*/
+
+        .tv-tela0{
+            display: block;
+            background-image: url('../img/TelaTv/tv0.png'); 
+        }
+
+        .tv-tela1{
+            display: block;
+            background-image: url('../img/TelaTv/tv1.png');
+        }
+
+        .tv-tela2{
+            display: none;
+            background-image: url('../img/TelaTv/tv2.png'); 
+        }
+
+        .tv-tela3{
+            display: none;
+            background-image: url('../img/TelaTv/tv3.png'); 
+        }
+
+        .tv-tela4{
+            display: none;
+            background-image: url('../img/TelaTv/tv4.png');
+        }
+
+    /* Telas Telefone--------------------------------------------------*/
+
+        .tel-tela0{
+            display: block;
+            background-image: url('../img/TelaTelefone/tel0.png'); 
+        }
+
+        .tel-tela1{
+            display: none;
+            background-image: url('../img/TelaTelefone/tel1.png');
+        }
+
+        .tel-tela2{
+            display: none;
+            background-image: url('../img/TelaTelefone/tel2.png'); 
+        }
+
+        .tel-tela3{
+            display: none;
+            background-image: url('../img/TelaTelefone/tel3.png'); 
+        }
+
+        .tel-tela4{
+            display: none;
+            background-image: url('../img/TelaTelefone/tel4.png');
+        }
+
+        .tel-tela5{
+            display: none;
+            background-image: url('../img/TelaTelefone/tel5.png');
+        }
+
+    /* Telas Ar Condicionado--------------------------------------------------*/
+
+        .ar-tela0{
+            display: block;
+            background-image: url('../img/TelaAr/ar0.png');
+        }
+
+        .ar-tela1{
+            display: none;
+            background-image: url('../img/TelaAr/ar1.png');
+        } 
+
+        .ar-tela2{
+            display: none;
+            background-image: url('../img/TelaAr/ar2.png');
+        } 
+
+        .ar-tela3{
+            display: none;
+            background-image: url('../img/TelaAr/ar3.png');
+        }
+
+    /* Telas Torneira--------------------------------------------------*/
+        .torneira-tela0{
+            display: block;
+            background-image: url('../img/TelaTorneira/torneira0.png');
+        }
+        .torneira-tela1{
+            display: none;
+            background-image: url('../img/TelaTorneira/torneira1.png');
+        } 
+        .torneira-tela2{
+            display: none;
+            background-image: url('../img/TelaTorneira/torneira2.png');
+        } 
+        .torneira-tela3{
+            display: none;
+            background-image: url('../img/TelaTorneira/torneira3.png');
+        } 
+        .torneira-tela4{
+            display: none;
+            background-image: url('../img/TelaTorneira/torneira4.png');
+        }
+        .torneira-tela5{
+            display: none;
+            background-image: url('../img/TelaTorneira/torneira5.png');
+        }
+
+/* -----------------------------------Entidades do Diagrama---------------------- */
+
+    #interface{
+        position: absolute;
+        height: 88px;
+        width: 155px;
+        left: 63px;
+        top: 220px;
+        //background-color:rgba(0,0,255,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
+
+    #affordance{
+        position: absolute;
+        height: 96px;
+        width: 178px;
+        left: 175px;
+        top: 370px;
+        //background-color:rgba(0,255,0,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
+
+    #interacao{
+        position: absolute;
+        height: 88px;
+        width: 154px;
+        left: 271px;
+        top: 230px;
+        //background-color:rgba(255,0,0,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
+
+    #eng-cognitiva{
+        position: absolute;
+        height: 109px;
+        width: 195px;
+        left: 454px;
+        top: 385px;
+        //background-color:rgba(200,200,0,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
+
+    #modelo-conceitual{
+        position: absolute;
+        height: 108px;
+        width: 175px;
+        left: 520px;
+        top: 221px;
+        //background-color:rgba(0,200,200,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
+
+    #modelo-mental{
+        position: absolute;
+        height: 108px;
+        width: 171px;
+        left: 714px;
+        top: 196px;
+        //background-color:rgba(200,0,200,.5);
+        z-index: 1000;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+    }
